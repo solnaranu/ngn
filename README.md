@@ -1,4 +1,4 @@
-#A library with functionalities tied to the Nigerian fintech/banking world.
+##A library with functionalities tied to the Nigerian fintech/banking world.
 
 ## sbt project cross-compiled with Dotty and Scala 2
 

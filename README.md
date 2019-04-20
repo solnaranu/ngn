@@ -1,4 +1,11 @@
-## A library with functionalities tied to the Nigerian fintech/banking world.
+# A library for Nigerian fintech/banking.
+
+Implemented in Dotty, cross compiling to Scala 2.
+
+## NUBAN (**N**igerian **U**niversal **A**ccount **N**umber)
+
+* Validator
+* Generator
 
 ## sbt project cross-compiled with Dotty and Scala 2
 

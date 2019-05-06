@@ -5,6 +5,7 @@ import scala.util.Random
 /**
   * Nigerian utils - NUBAN, account number, bank code, list of banks.
   */
+// TODO add testss
 // TODO mobile operator codes
 package object ngn {
 
@@ -87,7 +88,7 @@ package object ngn {
       require(nuban.forall(_.isDigit), "NUBAN must be digit only")
 
       val accountNumber = nuban.take(AccountNumber.RequiredLength)
-      val checkDigit = nuban.last
+      val checkDigit = nuban.last.asDigit
       val correctCheckDigit = calculateCheckDigit(accountNumber, bankCode)
       require(checkDigit == correctCheckDigit, s"Check digit $checkDigit is incorrect. Correct: $correctCheckDigit")
     }
@@ -140,7 +141,7 @@ package object ngn {
   case class Bank(name: String, code: BankCode)
 
   object Bank {
-    private[ngn] val All = IndexedSeq(
+    val All: IndexedSeq[Bank] = IndexedSeq(
       Bank("ACCESS BANK", "044"),
       Bank("CITIBANK", "023"),
       Bank("DIAMOND BANK", "063"),

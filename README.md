@@ -7,7 +7,7 @@
 
 # Usage examples
 
-```
+```scala
 import com.solnaranu.ngn._
 
 ...

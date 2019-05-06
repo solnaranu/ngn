@@ -1,17 +1,14 @@
-val dottyVersion = "0.14.0-RC1"
-val scala212Version = "2.12.7"
+import Dependencies._
 
-lazy val root = project
-  .in(file("."))
+ThisBuild / scalaVersion     := "2.12.8"
+ThisBuild / version          := "0.1.0-SNAPSHOT"
+ThisBuild / organization     := "com.solnaranu"
+ThisBuild / organizationName := "solnaranu"
+
+lazy val root = (project in file("."))
   .settings(
     name := "ngn",
-    version := "0.1.0",
-
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
-
-    // To make the default compiler and REPL use Dotty
-    scalaVersion := dottyVersion,
-
-    // To cross compile with Dotty and Scala 2
-    crossScalaVersions := Seq(dottyVersion, scala212Version)
+    libraryDependencies += scalaTest % Test
   )
+
+// See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

@@ -5,7 +5,7 @@
 * Generator / Calculator
 * Check digit calculator
 
-# Usage examples
+## Usage examples
 
 ```scala
 import com.solnaranu.ngn._

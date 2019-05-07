@@ -1,4 +1,4 @@
-# A work in progress **NUBAN** lib for (**N**igerian **U**niversal **B**ank **A**ccount **N**umber)
+# A work in progress **NUBAN** lib (**N**igerian **U**niversal **B**ank **A**ccount **N**umber)
 
 ## Contains
 * Validator
